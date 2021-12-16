@@ -1,0 +1,82 @@
+{
+  "USDC-WETH-10000": {
+    "createdAtTimestamp": "1620158865",
+    "feeTier": "10000",
+    "id": "0x7bea39867e4169dbe237d55c8242a8f2fcdcc387",
+    "swaps": [
+      {
+        "id": "0x0005c8e4f42f919a96d107af992cdded4cedbd4f4963d5a95dfc6e93ee129f16#14192",
+        "timestamp": "1634322753"
+      }
+    ],
+    "token0": {
+      "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC"
+    },
+    "token1": {
+      "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH"
+    },
+    "txCount": "17409"
+  },
+  "USDC-WETH-500": {
+    "createdAtTimestamp": "1620250931",
+    "feeTier": "500",
+    "id": "0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640",
+    "swaps": [
+      {
+        "id": "0x000003c0c87ba6f523ccc237af830365dc946c8a94dba8704b1f0aefdac87ebf#509020",
+        "timestamp": "1629253724"
+      }
+    ],
+    "token0": {
+      "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC"
+    },
+    "token1": {
+      "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH"
+    },
+    "txCount": "1044443"
+  },
+  "USDC-WETH-3000": {
+    "createdAtTimestamp": "1620169800",
+    "feeTier": "3000",
+    "id": "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+    "swaps": [
+      {
+        "id": "0x0000328cbe1ae7cba600d5c0cbc1387da983bb55ce49aa3519163334bf465430#115463",
+        "timestamp": "1625037540"
+      }
+    ],
+    "token0": {
+      "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC"
+    },
+    "token1": {
+      "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH"
+    },
+    "txCount": "249807"
+  },
+  "USDC-WETH-100": {
+    "createdAtTimestamp": "1636926269",
+    "feeTier": "100",
+    "id": "0xe0554a476a092703abdb3ef35c80e0d76d32939f",
+    "swaps": [
+      {
+        "id": "0x0139a557af6ded33edfd7ce0024f263a30c7721464fecb0b5c3601f55acd8b52#102",
+        "timestamp": "1638366021"
+      }
+    ],
+    "token0": {
+      "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC"
+    },
+    "token1": {
+      "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH"
+    },
+    "txCount": "131"
+  }
+}

@@ -1,0 +1,25 @@
+[
+  {
+    "createdAtTimestamp": "1620250931",
+    "feeTier": "500",
+    "id": "0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640",
+    "swaps": [
+      {
+        "id": "0x000003c0c87ba6f523ccc237af830365dc946c8a94dba8704b1f0aefdac87ebf#509020"
+      },
+      {
+        "id": "0x000007762b32364a5e1f49e2f304f340b732414c186b87925178d5f064bcb0db#66038"
+      }
+    ],
+    "token0": {
+      "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC"
+    },
+    "token0Price": "3723.683760638686246798444638979537",
+    "token1": {
+      "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH"
+    },
+    "txCount": "1039448"
+  }
+]

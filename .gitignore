@@ -1,0 +1,5 @@
+.DS_Store
+node_modules/
+data/pools/Jsondata/
+data/pools/errorlog.csv
+data/pools/saveState.json
