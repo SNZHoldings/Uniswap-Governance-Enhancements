@@ -13,7 +13,7 @@ async function swapsForEach(processFunc) {
 
   const counts = await swaps.count();
   let skipIndex = 0;
-  const batchSize = 100;
+  const batchSize = 1000;
 
   do {
     console.log(
@@ -42,20 +42,33 @@ async function swapsForEach(processFunc) {
     await _swapsCursor.close();
     skipIndex++;
   } while (skipIndex * batchSize < counts);
-
 }
 
 async function sortByAddress() {
   await swapsForEach(async function (row) {
-    const { id, origin } = row;
+    const { id, origin, amount0, amount1, amountUSD, sqrtPriceX96 } = row;
+    const _trade = {
+      id,
+      amount0: parseFloat(amount0),
+      amount1: parseFloat(amount1),
+      amountUSD: parseFloat(amountUSD),
+      sqrtPriceX96: parseInt(sqrtPriceX96),
+    };
     const odlUser = await users.findOne({ _id: origin });
     if (odlUser) {
-      if (odlUser.swaps.join(",").indexOf(`${id}`) < 0) {
+      let isInArray = false;
+      for (let i = 0; i < odlUser.swaps.length; i++) {
+        if (id === odlUser.swaps[i].id) {
+          isInArray = true;
+          break;
+        }
+      }
+      if (!isInArray) {
         await users.updateOne(
           { _id: origin },
           {
             $push: {
-              swaps: id,
+              swaps: _trade,
             },
           }
         );
@@ -65,7 +78,7 @@ async function sortByAddress() {
         .insertOne({
           _id: origin,
           address: origin,
-          swaps: [id],
+          swaps: [_trade],
         })
         .catch(async (err) => {
           // if insert error, try update
@@ -73,7 +86,7 @@ async function sortByAddress() {
             { _id: origin },
             {
               $push: {
-                swaps: id,
+                swaps: _trade,
               },
             }
           );
